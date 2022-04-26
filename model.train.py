@@ -8,6 +8,8 @@ Created on Mon Apr 25 10:03:37 2022
 import tensorflow as tf
 from datasets  import Datasets
 from traindatagenerator import DataGenerator
+from warnings import simplefilter  
+simplefilter(action='ignore', category=FutureWarning)
 
 class ModelTrain(object):
 
