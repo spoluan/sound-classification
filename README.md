@@ -8,10 +8,10 @@ Train the model \
 Test the model \
 `python test.py`
 
-Test on your real-world scenario \ 
+Test on a real-world scenario \
 `python app.py`
 
-If you want to change the datasets, you can copy your datasets into the `train` folder. The codes will automatically detect the folder listed in the `train` folder as your class label.
+To change your datasets, you can copy them into the `train` folder. The codes will automatically detect that the folder listed under the `train` folder is your class label.
 
 # Datasets
 You can download the complete dataset <a href="https://github.com/soerenab/AudioMNIST">here</a>. The dataset consists of 30,000 audio samples of spoken digits (0–9) from 60 different speakers.
