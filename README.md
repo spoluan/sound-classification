@@ -3,10 +3,13 @@ Install the dependencies \
 `python install --user -r requirements.txt` 
 
 Train the model \
-`python model.train.py`
+`python train.py`
 
 Test the model \
-`python model.test.py`
+`python test.py`
+
+Test on your real-world scenario \ 
+`python app.py`
 
 If you want to change the datasets, you can copy your datasets into the `train` folder. The codes will automatically detect the folder listed in the `train` folder as your class label.
 

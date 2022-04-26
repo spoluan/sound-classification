@@ -13,7 +13,7 @@ import os
 from warnings import simplefilter  
 simplefilter(action='ignore', category=FutureWarning)
 
-class ModelTrain(object):
+class ModelTest(object):
 
     def __init__(self):
         # Test path
@@ -66,13 +66,17 @@ class ModelTrain(object):
  
         return result
 
-    def predict(self, x_test):  
+    def predict(self, path): 
+
+        # Load sound
+        x_test = self.load_sound(path) 
 
         # Make a prediction
         pred = self.model.predict(x_test) 
 
         # Check the prediction
-        result = self.check_prediction(pred) 
+        result = self.check_prediction(pred)
+
         return result
 
     def main(self):
@@ -81,18 +85,15 @@ class ModelTrain(object):
         
         for x in test_paths: 
             path = os.path.join(self.TEST_PATH, x)
- 
-            # Load sound
-            x_test = self.load_sound(path)
-
-            # Predict sound
-            result = self.predict(x_test) 
+            
+            # Make a prediction
+            result = self.predict(path)
 
             # Print result
-            print(f'{path} = {result}')
-
+            print(f'{path} = {result}') 
+  
 if __name__ == '__main__':
-    app = ModelTrain()
+    app = ModelTest()
     app.main()
 
 
