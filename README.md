@@ -1,6 +1,6 @@
 # Descriptions
 Install the dependencies \
-`python install --user -r requirements.txt` 
+`python -m pip install --user -r requirements.txt` 
 
 Train the model \
 `python train.py`
